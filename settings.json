@@ -1,50 +1,24 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "ssh_connections": [
     {
-      "host": "satoshi",
-      "projects": [
-        {
-          "paths": [
-            "/share/Container"
-          ]
-        }
-      ]
+      "host": "hakase",
+      "projects": []
     }
   ],
   "assistant": {
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.0-flash-thinking-exp-1219"
+      "provider": "copilot_chat",
+      "model": "o3-mini"
     },
     "version": "2"
   },
-  "language_models": {
-    "google": {
-      "available_models": [
-        {
-          "name": "gemini-2.0-flash-exp",
-          "display_name": "Gemini 2.0 Flash",
-          "max_tokens": 1048576
-        },
-        {
-          "name": "gemini-2.0-flash-thinking-exp-1219",
-          "display_name": "Gemini 2.0 Flash Thinking",
-          "max_tokens": 1048576
-        }
-      ]
-    }
-  },
+  "language_models": {},
   "telemetry": {
-    "metrics": false,
-    "diagnostics": false
+    "metrics": true,
+    "diagnostics": true
   },
   "vim_mode": true,
   "ui_font_size": 15,
@@ -61,15 +35,21 @@
     "dark": "Catppuccin Mocha"
   },
   "auto_install_extension": {
+    "astro": true,
     "catppuccin": true,
     "csv": true,
     "docker-compose": true,
     "dockerfile": true,
+    "env": true,
     "git-firefly": true,
     "html": true,
+    "ini": true,
+    "justfile": true,
+    "log": true,
     "lua": true,
     "nix": true,
     "ruff": true,
-    "toml": true
+    "toml": true,
+    "xml": true
   }
 }
